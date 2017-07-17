@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>놀이터</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="openLoginPage($event)">로그인</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>이메일 주소</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>닉네임</ion-label>
+        <ion-input type="text" formControlName="nickname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>비밀번호</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <p *ngIf="email.hasError('required') && submitAttempt" style="color: red;">이메일주소를 입력하세요.</p>
+      <p *ngIf="nickname.hasError('required') && submitAttempt" style="color: red;">닉네임을 입력하세요.</p>
+      <p *ngIf="password.hasError('required') && submitAttempt" style="color: red;">비밀번호를 입력하세요.</p>
+      <p *ngIf="nickname.hasError('maxlength')" style="color: red;">닉네임은 최대 6자까지 가능합니다.</p>
+      <p *ngIf="password.hasError('minlength')" style="color: red;">비밀번호는 최소 8자까지 입력하셔야 합니다.</p>
+
+      <p *ngIf="email.hasError('emailTaken')" style="color: red;">이미 등록된 메일입니다.</p>
+      <p *ngIf="email.hasError('wrongEmail')" style="color: red;">올바른 이메일 주소가 아닙니다.</p>
+
+    </ion-list>
+    <button ion-button full (click)="register(registerForm.value)">가입하기</button>
+  </form>
+
+</ion-content>

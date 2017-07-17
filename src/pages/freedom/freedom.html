@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Freedom</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>행복점수</ion-label>
+      <ion-badge item-right>{{happiness}}</ion-badge>
+      <ion-range [(ngModel)]="happiness" color="danger" pin="true"></ion-range>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button (click)="alertHappiness()" full>행복점수 출력!</button>
+
+  <button ion-button (click)="alertStorageValue()" full round>스토리지 값 출력!</button>
+
+  <button ion-button (click)="alertClientId()" full outline>client id!</button>
+</ion-content>

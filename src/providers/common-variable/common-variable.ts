@@ -9,7 +9,7 @@ export class CommonVariableProvider {
 
   constructor(public http: Http) {
     // http://127.0.0.1:8000/
-    this.root_url = 'fathomless-garden-38295.herokuapp.com/';
+    this.root_url = 'https://fathomless-garden-38295.herokuapp.com/';
   }
 
 }

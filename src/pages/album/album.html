@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>모두닥 앨범집</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="takePicture()"><ion-icon name="camera"></ion-icon></button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let picture of pictures">
+      <img [src]="picture.image" />
+    </ion-item>
+  </ion-list>
+</ion-content>

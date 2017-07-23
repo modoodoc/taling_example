@@ -16,6 +16,7 @@ import { LoginPage } from '../pages/login/login';
 import { IntroPage } from '../pages/intro/intro';
 import { FreedomPage } from '../pages/freedom/freedom';
 import { AlbumPage } from '../pages/album/album';
+import { TalingPage } from '../pages/taling/taling';
 
 // custom provider
 import { HttpWithTokenProvider } from '../providers/http-with-token/http-with-token';
@@ -27,7 +28,7 @@ import { DataProvider } from '../providers/data/data';
 @NgModule({
   declarations: [
     MyApp,
-    RegisterPage, CommentPage, PlaygroundPage, LoginPage, IntroPage, FreedomPage, AlbumPage,
+    RegisterPage, CommentPage, PlaygroundPage, LoginPage, IntroPage, FreedomPage, AlbumPage, TalingPage,
     KoreanTimePipe,
   ],
   imports: [
@@ -43,7 +44,7 @@ import { DataProvider } from '../providers/data/data';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    RegisterPage, CommentPage, PlaygroundPage, LoginPage, IntroPage, FreedomPage, AlbumPage,
+    RegisterPage, CommentPage, PlaygroundPage, LoginPage, IntroPage, FreedomPage, AlbumPage, TalingPage,
   ],
   providers: [
     // native

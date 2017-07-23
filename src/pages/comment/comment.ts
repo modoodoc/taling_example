@@ -56,7 +56,7 @@ export class CommentPage {
   }
 
   writeComment(value) {
-    this.httpWithToken.postWithToken('api/comments/', {'content': value.content}).then(
+    this.httpWithToken.postWithToken('api/comments/', 'content=' + value.content).then(
       data => {
         let toast = this.toastCtrl.create({
           message: '글을 성공적으로 작성하였습니다!',

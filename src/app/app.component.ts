@@ -15,6 +15,7 @@ import { FreedomPage } from '../pages/freedom/freedom';
 import { AlbumPage } from '../pages/album/album';
 
 import { IntroPage } from '../pages/intro/intro';
+import { TalingPage } from '../pages/taling/taling';
 
 
 @Component({

@@ -22,9 +22,13 @@ export class PlaygroundPage {
 
   posts: any = [];
 
+  button_text: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: Http, public storage: Storage,
               public httpWithToken: HttpWithTokenProvider, public alertCtrl: AlertController, public loading: LoadingController,
               public menu: MenuController) {
+
+    this.button_text = '버튼이당';
 
     // 로그인 상태인지 확인하고 그에 따라 메뉴를 렌더링.
     this.menu.enable(false);
@@ -57,6 +61,15 @@ export class PlaygroundPage {
       }
     )
 
+  }
+
+  clickButton() {
+    let alert = this.alertCtrl.create({
+      title: '아이오닉은 좋아용',
+      subTitle: '굳굳',
+      buttons: ['오케이']
+    });
+    alert.present();
   }
 
   ionViewDidLoad() {
